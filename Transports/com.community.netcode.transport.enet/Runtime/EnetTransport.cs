@@ -130,7 +130,7 @@ namespace Netcode.Transports.Enet
                         payload = new ArraySegment<byte>();
                         receiveTime = Time.realtimeSinceStartup;
 
-                        connectedEnetPeers.Add(@event.Peer.ID, @event.Peer);
+                        connectedEnetPeers.[@event.Peer.ID] = @event.Peer;
 
                         @event.Peer.PingInterval(PingInterval);
                         @event.Peer.Timeout(TimeoutLimit, TimeoutMinimum, TimeoutMaximum);
