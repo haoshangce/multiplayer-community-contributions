@@ -261,7 +261,7 @@ namespace Netcode.Transports.Enet
 
         public override void DisconnectRemoteClient(ulong clientId)
         {
-            GetEnetConnectionDetails(serverPeerId, out uint peerId);
+            GetEnetConnectionDetails(clientId, out uint peerId);
 
             connectedEnetPeers[peerId].DisconnectNow(0);
         }
